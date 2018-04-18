@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <style>
+ .h{
+     border-bottom:1px solid black;
+     border-top:1px solid black;
+ }
+ table{
+     width: 60%;
+     height:60%;
+     margin:auto;
+     
+ }
+ img{
+     width:0;
+     height:0;
+ }
+ td{
+     width:200px;
+     height:150px;
+     cursor: pointer;
+ }
+ .v{
+     border-left:1px solid black;
+     border-right:1px solid black;
+ }
+ h1{
+     text-align: center;
+ }
+    </style>
+</head>
+<body>
+
+
+    <h1>TIC-TAC-TOE</h1>
+    <h2></h2>
+        <table>
+                <tr>
+                        <td ><img src="" ></td>
+                        <td class="v"><img src="" ></td> 
+                        <td ><img src="" ></td>
+                </tr>
+                <tr>
+                  <td class="h" ><img src="" ></td>
+                  <td class="h v"><img src="" ></td> 
+                  <td class="h"> <img src="" ></td>
+                </tr>
+                <tr>
+                  <td><img src="" ></td>
+                  <td class="v"><img src="" ></td> 
+                  <td><img src="" ></td>
+                </tr>
+              </table> 
+              
+      <script>
+ var name=prompt("player1 name","player1");
+ var name2=prompt("player2 name","player2");
+       var k=document.querySelector("h2");
+       k.textContent=" ";
+var count=[0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0];
+var f=1;
+var check=0;
+      
+      var image=document.querySelectorAll(" img");
+       
+       var td=document.querySelectorAll("td");
+td.forEach(function(item,index){
+item.addEventListener("click",function(){
+ if(count[index]==0){
+if(f==1)
+{image[index].setAttribute("src","http://www.clker.com/cliparts/8/0/1/9/1195445329999867155jean_victor_balin_cross.svg.hi.png");
+image[index].style.width = "80%";
+image[index].style.height = "80%";
+count[index]=1;
+f=2;
+k.textContent=name2;
+}
+else{
+    image[index].setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/5/53/Opera_O.png");
+    image[index].style.width = "80%";
+image[index].style.height = "80%";
+count[index]=2;
+f=1; 
+k.textContent=name; 
+}
+
+}
+else{
+     alert("sorry wrong click!!");
+ } 
+ if(count[0]==1 && count[4]==1 && count[8]==1){
+     check=1;
+ setTimeout(function(){alert("player1 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[0]==1 && count[1]==1 && count[2]==1){
+    check=1;
+ setTimeout(function(){alert("player1 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[3]==1 && count[4]==1 && count[5]==1){
+    check=1;
+ setTimeout(function(){alert("player1 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[6]==1 && count[7]==1 && count[8]==1){
+    check=1;
+ setTimeout(function(){alert("player1 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[2]==1 && count[4]==1 && count[6]==1){
+    check=1;
+ setTimeout(function(){alert("player1 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[0]==1 && count[3]==1 && count[6]==1){
+    check=1;
+ setTimeout(function(){alert("player1 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[1]==1 && count[4]==1 && count[7]==1){
+    check=1;
+ setTimeout(function(){alert("player1 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[2]==1 && count[5]==1 && count[8]==1){
+    check=1;
+ setTimeout(function(){alert("player1 wins");alert("wanna play gaian?");reset();},0);}
+
+
+
+
+
+ if(count[0]==2 && count[4]==2 && count[8]==2){
+     check=1;
+ setTimeout(function(){alert("player2 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[0]==2 && count[1]==2 && count[2]==2){
+    check=1;
+ setTimeout(function(){alert("player2 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[3]==2 && count[4]==2 && count[5]==2){
+    check=1;
+ setTimeout(function(){alert("player2 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[6]==2 && count[7]==2 && count[8]==2){
+    check=1;
+ setTimeout(function(){alert("player2 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[2]==2 && count[4]==2 && count[6]==2){
+    check=1;
+ setTimeout(function(){alert("player2 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[0]==2 && count[3]==2 && count[6]==2){
+    check=1;
+ setTimeout(function(){alert("player2 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[1]==2 && count[4]==2 && count[7]==2){
+    check=1;
+ setTimeout(function(){alert("player2 wins");alert("wanna play gaian?");reset();},0);}
+
+if(count[2]==2 && count[5]==2 && count[8]==2){
+    check=1;
+ setTimeout(function(){alert("player2 wins");alert("wanna play gaian?");reset();},0);}
+
+
+if(count[0]!=0 && count[1]!=0 && count[2]!=0 && count[3]!=0  && count[4]!=0  && count[5]!=0 && count[6]!=0 && count[7]!=0 && count[8]!=0 && check==0 )
+ setTimeout(function(){alert("its a tie");alert("wanna play gaian?");reset();},0);
+ 
+
+
+ 
+}
+
+);
+});
+function reset(){
+    image.forEach(function(item){
+        item.setAttribute("src","");
+        item.style.width = 0;
+item.style.height = 0;})
+k.textContent=" ";
+for(var t=0;t<9;t++)
+{
+count[t]=0;
+}
+  f=1;  
+  check=0;
+
+} 
+
+  
+
+
+
+   
+      </script>
+
+</body>
+</html>
