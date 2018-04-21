@@ -7,9 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
     <style>
+
+        body{
+            background: url("http://coversforfb.com/media/covers/thumb/Games--Abstergo-logo--25342.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
  .h{
-     border-bottom:1px solid black;
-     border-top:1px solid black;
+     border-bottom:1px solid white;
+     border-top:1px solid white;
  }
  table{
      width: 60%;
@@ -20,18 +28,32 @@
  img{
      width:0;
      height:0;
+     
  }
  td{
      width:200px;
      height:150px;
      cursor: pointer;
+     text-align: center;
  }
+ 
  .v{
-     border-left:1px solid black;
-     border-right:1px solid black;
+     border-left:1px solid white;
+     border-right:1px solid white;
  }
  h1{
      text-align: center;
+color:white;     
+ }
+ h2{
+     color: white;
+ }
+
+ @media screen and (max-width: 568px){
+td{
+    height:120px;
+    width:200px;
+}
  }
     </style>
 </head>
