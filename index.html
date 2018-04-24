@@ -81,17 +81,10 @@ td{
               </table> 
               
       <script>
-
-          var name=" ";
-          var name2=" ";
-          setTimeout(function(){
-             name=prompt("player1 name","player1");
-  name2=prompt("player2 name","player2");
-  k.textContent=name;
-          },500);
- 
+ var name=prompt("player1 name","player1");
+ var name2=prompt("player2 name","player2");
        var k=document.querySelector("h2");
-       
+       k.textContent=name;
 var count=[0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0];
 var f=1;
 var check=0;
@@ -207,7 +200,7 @@ function reset(){
         item.setAttribute("src","");
         item.style.width = 0;
 item.style.height = 0;})
-k.textContent="player1 ";
+k.textContent=name;
 for(var t=0;t<9;t++)
 {
 count[t]=0;
